@@ -29,10 +29,6 @@ class MerchantProductOptionOptionQueryCriteriaExpander implements MerchantProduc
      */
     protected $request;
 
-    /**
-     * @param \Spryker\Zed\MerchantProductOptionGui\Persistence\MerchantProductOptionGuiRepositoryInterface $merchantProductOptionGuiRepository
-     * @param \Symfony\Component\HttpFoundation\Request|null $request
-     */
     public function __construct(
         MerchantProductOptionGuiRepositoryInterface $merchantProductOptionGuiRepository,
         ?Request $request
@@ -41,11 +37,6 @@ class MerchantProductOptionOptionQueryCriteriaExpander implements MerchantProduc
         $this->request = $request;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QueryCriteriaTransfer $queryCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     public function expandQueryCriteria(QueryCriteriaTransfer $queryCriteriaTransfer): QueryCriteriaTransfer
     {
         if (!$this->request) {

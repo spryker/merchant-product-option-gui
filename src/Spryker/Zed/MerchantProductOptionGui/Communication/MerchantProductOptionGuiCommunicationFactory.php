@@ -20,9 +20,6 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 class MerchantProductOptionGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\MerchantProductOptionGui\Communication\Expander\MerchantProductOptionQueryCriteriaExpanderInterface
-     */
     public function createMerchantProductQueryCriteriaExpander(): MerchantProductOptionQueryCriteriaExpanderInterface
     {
         return new MerchantProductOptionOptionQueryCriteriaExpander(
@@ -31,17 +28,11 @@ class MerchantProductOptionGuiCommunicationFactory extends AbstractCommunication
         );
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\Request|null
-     */
     public function getRequest(): ?Request
     {
         return $this->getRequestStack()->getCurrentRequest();
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\RequestStack
-     */
     public function getRequestStack(): RequestStack
     {
         return $this->getProvidedDependency(MerchantProductOptionGuiDependencyProvider::SERVICE_REQUEST_STACK);

@@ -12,12 +12,6 @@ use Generated\Shared\Transfer\QueryCriteriaTransfer;
 
 interface MerchantProductOptionGuiRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QueryCriteriaTransfer $queryCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     public function expandQueryCriteriaTransferWithMerchantProductOptionRelation(
         QueryCriteriaTransfer $queryCriteriaTransfer,
         MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer

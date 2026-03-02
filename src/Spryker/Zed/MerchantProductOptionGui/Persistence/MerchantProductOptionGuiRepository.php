@@ -17,12 +17,6 @@ use Spryker\Zed\PropelOrm\Business\Runtime\ActiveQuery\Criteria;
 
 class MerchantProductOptionGuiRepository implements MerchantProductOptionGuiRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QueryCriteriaTransfer $queryCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\QueryCriteriaTransfer
-     */
     public function expandQueryCriteriaTransferWithMerchantProductOptionRelation(
         QueryCriteriaTransfer $queryCriteriaTransfer,
         MerchantProductOptionGroupCriteriaTransfer $merchantProductOptionGroupCriteriaTransfer
